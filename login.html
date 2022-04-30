@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>frontend</title>
+    <style>
+ #container{
+    width:30%;
+    height:250px;
+    
+    margin:auto;
+    margin-top: 150px;
+    
+    
+    
+}
+#email{
+    width:90%;
+    height:50px;
+    margin: auto;
+    font-size: large;
+    margin-top: -40px;
+    
+   
+    
+
+}
+#password{
+    width:90%;
+    height:50px;
+    margin: auto;
+    font-size: large;
+    
+    margin-top: 20px;
+   
+
+}
+
+#submit{
+  margin: auto;
+  margin-top: 20px;
+  width:70%;
+  height: 50px;
+  font-size: large;
+  margin-left: 40px;
+  
+}
+
+
+
+</style>
+</head>
+<body>
+  <h1></h1>
+  <div id="link">
+    <div><a href="signup.html"></a></div>
+
+    <div id="container">
+        <h3>Email-id 
+
+        </h3>
+        <input type="text" placeholder="Enter Your Email" id="email">
+
+        <input type="password" placeholder="Enter Password" id="password">
+
+        <input type="submit" value="Login" id="submit">
+    </div>
+    
+
+  
+</body>
+</html>
+
+<script>
+var emaillast=localStorage.getItem("email")
+
+var passwordlast=localStorage.getItem("password")
+
+document.querySelector("#submit").addEventListener("click",signinfun)
+
+function signinfun(){
+    var emailnow=document.querySelector("#email").value
+    
+    var passwordnow=document.querySelector("#password").value
+    
+  if(emaillast==emailnow&&passwordlast==passwordnow)
+  {
+      alert("Login Successfull")
+  }
+  else if(emaillast!=emailnow)
+  {
+      alert("Wrong Email-id")
+  }
+  else if(passwordlast!=passwordnow)
+  {
+      alert("Wrong Password")
+  }
+  
+
+}
+
+
+</script>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+#container{
+    width:30%;
+    height:350px;
+    
+    margin:auto;
+    margin-top: 150px;
+    
+    
+    
+}
+#email{
+    width:90%;
+    height:50px;
+    margin: auto;
+    font-size: large;
+    
+    margin-top: -40px;
+    
+
+}
+
+#mobile{
+    width:90%;
+    height:50px;
+    margin: auto;
+    font-size: large;
+    
+    margin-top:  -40px;
+    
+
+}
+
+#password{
+    width:90%;
+    height:50px;
+    margin: auto;
+    font-size: large;
+    
+    margin-top: 40px;
+   
+
+}
+#submit{
+  margin: auto;
+  margin-top: 20px;
+  width:70%;
+  height: 50px;
+  font-size: large;
+  margin-left: 40px;
+  
+}
+
+
+
+</style>
+</head>
+<body>
+
+ <div id="link">
+<div><a href="login.html"></a></div>
+
+
+ </div>
+
+
+  <div id="container">
+    <h4>Email-id</h2>
+<input type="text" placeholder="Enter Your Email" id="email">
+    <h4>Mobile No</h4>
+<input  type="number" placeholder="Enter Your mobile no" id="mobile">
+
+<input type="password" placeholder="Enter password" id="password">
+<input type="submit" id="submit">
+
+
+  </div>
+  
+</body>
+</html>
+<script>
+
+
+
+document.querySelector("#submit").addEventListener("click",loginfun)
+
+function loginfun(){
+
+  var email=document.querySelector("#email").value
+  
+  var mobile=document.querySelector("#mobile").value
+  console.log(mobile)
+
+  var password=document.querySelector("#password").value
+  console.log(password)
+
+  localStorage.setItem("email",email)
+  localStorage.setItem("mobile",mobile)
+  localStorage.setItem("password",password)
+
+  window.location.href="login.html"
+  
+
+}
+
+</script>
+ 
